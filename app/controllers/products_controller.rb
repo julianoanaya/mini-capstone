@@ -11,8 +11,13 @@ class ProductsController < ApplicationController
     # def Mac_Book_method
     #     render(json: Product.last)
     # end
-    def one_product
+    def index
+        product = Product.all
+        render json: product.as_json
+    end
+    def show
         product = Product.find_by(id: params["id"])
         render json: product.as_json
     end
+
 end

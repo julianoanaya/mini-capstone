@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # get "/tv", controller:"products", action: "tv_method"
   # get "/Ps5", controller:"products", action: "Ps5_method"
   # get "/Mac_Book", controller:"products", action: "Mac_Book_method"
-  get "/one_product/:id", controller: "products", action: "one_product"
+  get"/products" => "products#index"
+  get "/products/:id", controller: "products", action: "show"
 
 end
