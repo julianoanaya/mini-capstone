@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # get "/Mac_Book", controller:"products", action: "Mac_Book_method"
   get"/products" => "products#index"
   get "/products/:id", controller: "products", action: "show"
-
+  post"/products" => "products#create"
 end

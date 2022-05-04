@@ -1,0 +1,17 @@
+### index
+
+GET 
+
+### show
+GET 
+
+### create
+Post http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Iphone",
+    "price": "test",
+    "image_url": "test",
+    "description": "test"
+}
