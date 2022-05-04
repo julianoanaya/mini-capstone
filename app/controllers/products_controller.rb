@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
         render(json: Product.first)
     end
     def Ps5_method
-        render(json: Product.)
+        render(json: Product.second)
     end
     def Mac_Book_method
         render(json: Product.last)
