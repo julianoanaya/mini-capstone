@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # get "/tv", controller:"products", action: "tv_method"
   # get "/Ps5", controller:"products", action: "Ps5_method"
   # get "/Mac_Book", controller:"products", action: "Mac_Book_method"
-  get"/products" => "products#index"
+  get "/products" => "products#index"
   get "/products/:id", controller: "products", action: "show"
-  post"/products" => "products#create"
+  post "/products" => "products#create"
+  patch "/products/:id" => "products#update"
+  delete "/products/:id" => "products#destroy"
 end

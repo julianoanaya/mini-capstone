@@ -1,9 +1,9 @@
 ### index
 
-GET 
+GET http://localhost:3000/products
 
 ### show
-GET 
+GET http://localhost:3000/products/7
 
 ### create
 Post http://localhost:3000/products
@@ -15,3 +15,17 @@ Content-Type: application/json
     "image_url": "test",
     "description": "test"
 }
+
+### updates
+PATCH http://localhost:3000/products/9
+Content-Type: application/json
+
+{
+    "name": "Iphone",
+    "price": "test",
+    "image_url": "testing",
+    "decription": "test"
+}
+
+### destroy
+DELETE  http://localhost:3000/products/7

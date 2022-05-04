@@ -21,12 +21,30 @@ class ProductsController < ApplicationController
     end
     def create
         product = Product.new(
-            name: params["test"],
-            price: params[23],
-            image_ulr: params["test.image"],
-            decription: params["this is the description"],
+            name: params["name"],
+            price: params["price"],
+            image_ulr: params["image_url"],
+            decription: params["description"],
         )
         product.save
         render json: product.as_json
+    end
+    def update
+        product_id = params["id"]
+        product = Product.find_by(id: product_id)
+        product.name = params["name"] || product.name
+        product.price = params["price"] || product.price
+        # product.image_url = params["image_url"] || product.image_url
+        product.decription = params["decription"] || product.decription
+
+        product.save
+
+        render json: product.as_json
+    end
+    def destroy
+        product_id = params["id"]
+        product = Product.find_by(id: product_id)
+        product.destroy
+        render json: {message: "Product deleted"}
     end
 end
